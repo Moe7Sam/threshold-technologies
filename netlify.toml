@@ -1,0 +1,3 @@
+[build]
+  command = "echo Using prebuilt static export"
+  publish = "out"
