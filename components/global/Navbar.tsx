@@ -15,10 +15,9 @@ export default function Navbar() {
       <div className="desktop-nav">
         <Link href="/">Home</Link>
         <Link href="/consulting">Consulting</Link>
-        <Link href="/disam">SaaS</Link>
+        <Link href="/saas">SaaS</Link>
         <Link href="/academy">Academy</Link>
-        <Link href="/about">Ventures</Link>
-        <Link href="/about">About</Link>
+        <Link href="/contact">Contact</Link>
       </div>
       <Link href="/contact" className="nav-cta">Contact</Link>
     </nav>

@@ -318,6 +318,54 @@ h1,h2,h3,.wordmark-copy b,.site-footer h2{
   text-transform:uppercase;
 }
 
+.company-page-hero{
+  position:relative;
+  padding:clamp(150px,18vw,210px) max(5vw,24px) clamp(80px,10vw,140px);
+  border-bottom:1px solid var(--line);
+  overflow:hidden;
+}
+.company-page-hero:before{
+  position:absolute;
+  inset:0;
+  content:"";
+  background-image:
+    linear-gradient(rgba(241,236,227,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(241,236,227,.035) 1px,transparent 1px);
+  background-size:88px 88px;
+  mask-image:linear-gradient(to bottom,black,transparent 86%);
+}
+.company-page-hero>*{position:relative;z-index:1}
+.company-page-hero h1{
+  max-width:1180px;
+  margin:24px 0 0;
+  color:var(--paper);
+  font-size:clamp(3.7rem,7vw,8rem);
+  font-weight:500;
+  line-height:.92;
+  letter-spacing:-.07em;
+}
+.company-page-hero p:not(.premium-kicker){
+  max-width:720px;
+  margin:28px 0 0;
+  color:var(--muted);
+  font-size:clamp(1.02rem,1.25vw,1.2rem);
+  line-height:1.7;
+}
+.ecosystem-card>p{
+  max-width:34rem;
+  margin:0;
+  color:var(--muted);
+  line-height:1.65;
+}
+.work-list article>div p{
+  max-width:680px;
+  margin:14px 0 0;
+  color:var(--muted);
+  line-height:1.65;
+}
+.premium-button--inline{margin-top:38px}
+.contact-section--compact{padding-top:clamp(76px,9vw,130px);padding-bottom:clamp(76px,9vw,130px)}
+
 .site-footer{
   background:#08090b;
   color:var(--paper);
@@ -354,6 +402,8 @@ h1,h2,h3,.wordmark-copy b,.site-footer h2{
   .site-header nav{height:72px}
   .premium-hero{padding-top:122px}
   .premium-hero h1{font-size:clamp(3.45rem,15vw,5.8rem)}
+  .company-page-hero{padding-top:122px}
+  .company-page-hero h1{font-size:clamp(3.2rem,14vw,5.4rem)}
   .premium-actions,.contact-links{display:grid}
   .premium-button,.contact-links a,.contact-links span{width:100%}
   .premium-hero__panel{padding:24px}

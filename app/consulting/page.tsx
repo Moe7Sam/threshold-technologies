@@ -1,19 +1,55 @@
 import Link from 'next/link';
-import PageHero from '@/components/PageHero';
-import Card from '@/components/Card';
-import { consultingServices } from '@/lib/content';
 
-export const metadata = { title: 'Consulting | Threshold Technologies', description: 'Commercial Excellence.' };
+const services = [
+  {
+    title: 'BIM & Digital Delivery',
+    copy: 'Structured delivery systems for design, construction and asset data.',
+  },
+  {
+    title: 'Cost Management',
+    copy: 'Commercial control across budgets, procurement and project reporting.',
+  },
+  {
+    title: 'Commercial Intelligence',
+    copy: 'Decision frameworks that connect cost, risk and business performance.',
+  },
+  {
+    title: 'Business Consulting',
+    copy: 'Operating models, digital strategy and executive advisory for growth.',
+  },
+];
+
+export const metadata = {
+  title: 'Consulting | Threshold Technologies',
+  description: 'Engineering, BIM, commercial intelligence and business consulting from Threshold Technologies.',
+};
 
 export default function Page() {
   return (
-    <main>
-      <PageHero eyebrow="Consulting" title="Consulting" lead="Commercial Excellence" />
-      <section className="page-section">
-        <div className="nav-grid three">
-          {consultingServices.map((service) => <Card key={service} title={service} copy="Consulting" cta="Service" />)}
+    <main className="premium-home">
+      <section className="company-page-hero">
+        <p className="premium-kicker">Consulting</p>
+        <h1>Commercial advisory for digital delivery and business systems.</h1>
+        <p>Executive consulting across construction, cost, intelligence and operating models.</p>
+      </section>
+
+      <section className="premium-section">
+        <div className="premium-section__head">
+          <p className="premium-kicker">Services</p>
+          <h2>Practical advisory built for project control and enterprise clarity.</h2>
         </div>
-        <Link href="/contact" className="text-link">Start Conversation</Link>
+        <div className="ecosystem-grid">
+          {services.map((service, index) => (
+            <article className="ecosystem-card" key={service.title}>
+              <span>{String(index + 1).padStart(2, '0')}</span>
+              <h3>{service.title}</h3>
+              <p>{service.copy}</p>
+            </article>
+          ))}
+        </div>
+        <Link href="/contact" className="premium-button premium-button--inline">
+          Business Enquiry
+        </Link>
       </section>
     </main>
   );
