@@ -27,7 +27,9 @@ export default function Footer() {
           <Link href="/">Home</Link>
           <Link href="/consulting">Consulting</Link>
           <Link href="/saas">SaaS Platforms</Link>
+          <Link href="/products/sitereport-ai">SiteReport AI</Link>
           <Link href="/academy">Academy</Link>
+          <Link href="/founder">Founder</Link>
           <Link href="/contact">Contact</Link>
         </div>
       </div>

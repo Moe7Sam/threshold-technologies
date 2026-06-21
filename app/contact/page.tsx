@@ -2,26 +2,37 @@ const contactSections = [
   {
     title: 'Business Enquiries',
     copy: 'Consulting, platforms and digital delivery conversations.',
+    href: 'mailto:info@threshold-technologies.com?subject=Business%20enquiry',
   },
   {
     title: 'Partnerships',
     copy: 'Strategic collaboration across technology, construction and education.',
+    href: 'mailto:info@threshold-technologies.com?subject=Partnership%20enquiry',
   },
   {
-    title: 'Careers',
-    copy: 'Future opportunities for product, advisory and learning talent.',
+    title: 'Product Access',
+    copy: 'Early access conversations for SiteReport AI and future product pilots.',
+    href: 'mailto:info@threshold-technologies.com?subject=Product%20access',
   },
   {
-    title: 'Investor Relations',
-    copy: 'Venture, IP and long-term growth discussions.',
+    title: 'Founder Contact',
+    copy: 'Founder-led conversations for strategic opportunities and commercial systems.',
+    href: 'mailto:info@threshold-technologies.com?subject=Founder%20contact',
   },
 ];
 
-const contactLinks = ['LinkedIn', 'Email', 'UAE Headquarters'];
+const contactLinks = [
+  {
+    label: 'LinkedIn',
+    href: 'https://www.linkedin.com/search/results/all/?keywords=Threshold%20Technologies%20FZE%20LLC',
+  },
+  { label: 'Email', href: 'mailto:info@threshold-technologies.com' },
+  { label: 'UAE Headquarters', href: 'mailto:info@threshold-technologies.com?subject=UAE%20headquarters' },
+];
 
 export const metadata = {
   title: 'Contact | Threshold Technologies',
-  description: 'Business enquiries, partnerships, careers and investor relations for Threshold Technologies.',
+  description: 'Contact Threshold Technologies for business enquiries, partnerships, product access and founder contact.',
 };
 
 export default function Page() {
@@ -40,11 +51,11 @@ export default function Page() {
         </div>
         <div className="ecosystem-grid">
           {contactSections.map((section, index) => (
-            <article className="ecosystem-card" key={section.title}>
+            <a className="ecosystem-card" href={section.href} key={section.title}>
               <span>{String(index + 1).padStart(2, '0')}</span>
               <h3>{section.title}</h3>
               <p>{section.copy}</p>
-            </article>
+            </a>
           ))}
         </div>
       </section>
@@ -54,7 +65,7 @@ export default function Page() {
         <h2>LinkedIn, email and UAE headquarters.</h2>
         <div className="contact-links">
           {contactLinks.map((item) => (
-            <span key={item}>{item}</span>
+            <a href={item.href} key={item.label}>{item.label}</a>
           ))}
         </div>
       </section>

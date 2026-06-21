@@ -21,7 +21,7 @@ const services = [
 
 export const metadata = {
   title: 'Consulting | Threshold Technologies',
-  description: 'Engineering, BIM, commercial intelligence and business consulting from Threshold Technologies.',
+  description: 'Consulting for BIM, digital delivery, cost management, commercial intelligence and business systems.',
 };
 
 export default function Page() {

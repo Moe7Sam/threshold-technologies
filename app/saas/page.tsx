@@ -21,7 +21,7 @@ const platforms = [
 
 export const metadata = {
   title: 'SaaS Platforms | Threshold Technologies',
-  description: 'AI tools, workflows, industry platforms and future software products from Threshold Technologies.',
+  description: 'Threshold Technologies builds AI tools, workflows, industry platforms and future software products.',
 };
 
 export default function Page() {
@@ -38,6 +38,12 @@ export default function Page() {
           <p className="premium-kicker">Product Direction</p>
           <h2>Software built from real operational problems, not generic SaaS templates.</h2>
         </div>
+        <Link href="/products/sitereport-ai" className="featured-product-card featured-product-card--section">
+          <span>Product Page</span>
+          <strong>SiteReport AI</strong>
+          <p>AI-assisted field reporting for construction, engineering, and site operations.</p>
+          <b>View product</b>
+        </Link>
         <div className="work-list">
           {platforms.map((platform, index) => (
             <article key={platform.title}>

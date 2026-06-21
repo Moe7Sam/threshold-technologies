@@ -21,7 +21,7 @@ const tracks = [
 
 export const metadata = {
   title: 'Academy | Threshold Technologies',
-  description: 'BIM, digital construction, commercial intelligence and professional training programs.',
+  description: 'Professional training in BIM v2.0, digital construction and commercial intelligence education.',
 };
 
 export default function Page() {

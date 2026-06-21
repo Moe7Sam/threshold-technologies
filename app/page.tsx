@@ -1,4 +1,10 @@
 import Link from 'next/link';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Threshold Technologies | Digital Infrastructure for Commercial Intelligence',
+  description: 'Threshold Technologies builds AI, SaaS, consulting and education platforms for commercial intelligence.',
+};
 
 const ecosystem = [
   {
@@ -95,6 +101,12 @@ export default function Home() {
             </article>
           ))}
         </div>
+        <Link href="/products/sitereport-ai" className="featured-product-card">
+          <span>Featured Product</span>
+          <strong>SiteReport AI</strong>
+          <p>AI-assisted field reporting for construction, engineering, and site operations.</p>
+          <b>Request early access</b>
+        </Link>
       </section>
 
       <section className="founder-section">
