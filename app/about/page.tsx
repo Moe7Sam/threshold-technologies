@@ -1,18 +1,2 @@
-import PageHero from '@/components/PageHero';
-import Card from '@/components/Card';
-import { aboutItems } from '@/lib/content';
-
-export const metadata = { title: 'About | Threshold Technologies', description: 'Threshold Technologies.' };
-
-export default function Page() {
-  return (
-    <main>
-      <PageHero eyebrow="About Threshold" title="About Threshold" lead="Threshold Technologies" />
-      <section className="page-section">
-        <div className="nav-grid four">
-          {aboutItems.map((item) => <Card key={item.name} title={item.name} copy={item.line} cta="Profile" />)}
-        </div>
-      </section>
-    </main>
-  );
-}
+export const metadata = { title: 'About | Threshold Technologies' };
+export default function About() { return <main><section className="hero"><div className="wrap"><p className="eyebrow">About Threshold</p><h1>Vision &amp; mission</h1><p>Threshold Technologies exists to move organisations from traditional workflows into structured digital delivery — and to put AI at the centre of how they operate.</p></div></section><section className="section"><div className="wrap split"><div><p className="eyebrow">Vision</p><h2>Integrating AI across every sector</h2><p>Our vision is to integrate AI into the core of how businesses operate — embedding intelligent automation into data, engineering, commercial, and management workflows so teams decide and deliver with greater accuracy.</p></div><div><p className="eyebrow">Mission</p><h2>Turning information into intelligence</h2><p>Our mission is to build digital systems and software that carry business information across the threshold — from raw data, through AI and automation, into structured, commercially ready intelligence.</p></div></div></section><section className="section"><div className="wrap"><p className="eyebrow">The principle</p><p className="statement">We work where business information becomes digital intelligence — embedding <b>data</b>, <b>AI</b>, and <b>automation</b> into existing workflows.</p></div></section><section className="section"><div className="wrap"><div className="head"><p className="eyebrow">Strategic Partners</p><h2>Who we build alongside</h2><p className="lede">Threshold works with selected partners to deliver across sectors.</p></div><div className="grid grid--3"><div className="card"><span className="card__tag">ROA</span><h3>ROA Consultancy</h3><p>A strategic consultancy partner of Threshold Technologies, managed by Ammar — co-founder of Threshold.</p></div></div></div></section></main>; }

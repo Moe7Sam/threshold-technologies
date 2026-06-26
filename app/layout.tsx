@@ -1,4 +1,5 @@
 import './globals.css'
+import './marketing.css'
 import type { Metadata } from 'next'
 import { Space_Grotesk, Inter, JetBrains_Mono } from 'next/font/google'
 import Navbar from '@/components/global/Navbar'

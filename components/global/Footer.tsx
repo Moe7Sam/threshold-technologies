@@ -1,29 +1,5 @@
 import Link from 'next/link';
 
 export default function Footer() {
-  return (
-    <footer className="site-footer">
-      <span className="th-grid" aria-hidden="true" />
-      <div className="footer-inner">
-        <div className="footer-top">
-          <div>
-            <p className="kicker">// Threshold Technologies FZE LLC</p>
-            <h2>The threshold between business information and digital intelligence.</h2>
-          </div>
-          <nav className="footer-links" aria-label="Footer">
-            <Link href="/#about">About</Link>
-            <Link href="/#vision">Vision</Link>
-            <Link href="/#services">Services</Link>
-            <Link href="/#products">Products</Link>
-            <Link href="/#partners">Partners</Link>
-            <Link href="/#contact">Contact</Link>
-          </nav>
-        </div>
-        <div className="footer-bottom">
-          <span>Ajman NuVentures Centre Free Zone — United Arab Emirates</span>
-          <span>© {new Date().getFullYear()} Threshold Technologies FZE LLC</span>
-        </div>
-      </div>
-    </footer>
-  );
+  return <footer className="foot"><div className="wrap"><div className="foot__top"><p className="foot__statement">The threshold between business information and digital intelligence.</p><nav aria-label="Footer"><ul className="foot__nav"><li><Link href="/">Home</Link></li><li><Link href="/about">About</Link></li><li><Link href="/services">Services</Link></li><li><Link href="/blog">Blog</Link></li><li><Link href="/contact">Contact</Link></li></ul></nav></div><div className="foot__meta"><span>Threshold Technologies FZE LLC — Ajman NuVentures Centre Free Zone, UAE</span><span>© {new Date().getFullYear()} Threshold Technologies FZE LLC</span></div></div></footer>;
 }
