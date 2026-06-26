@@ -7,17 +7,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
 :root {
-  --ink:        #0C1117;
-  --surface:    #111A23;
-  --surface-2:  #15212C;
-  --line:       #22323F;
-  --line-soft:  #1a2731;
-  --paper:      #ECEFF3;
-  --muted:      #8493A1;
-  --muted-dim:  #5d6b78;
-  --signal:     #EAA640;   /* amber — intelligence crossing the threshold */
-  --signal-soft:rgba(234,166,64,.12);
-  --data:       #52B3C9;   /* cyan — raw data, used sparingly */
+  --ink:        #050505;
+  --surface:    #0D0D0F;
+  --surface-2:  #15151A;
+  --line:       #1F1F24;
+  --line-soft:  #17171B;
+  --paper:      #FFFFFF;
+  --muted:      #B8B8B8;
+  --muted-dim:  #6A6A6E;
+  --signal:     #8B1028;
+  --signal-soft:rgba(139,16,40,.16);
+  --data:       #A51632;
 
   --maxw: 1180px;
   --gutter: clamp(20px, 5vw, 64px);
@@ -25,6 +25,9 @@
   --f-display: 'Space Grotesk', system-ui, sans-serif;
   --f-body: 'IBM Plex Sans', system-ui, sans-serif;
   --f-mono: 'IBM Plex Mono', ui-monospace, monospace;
+  --signal: #8B1028;
+  --signal-soft: rgba(139,16,40,.16);
+  --data: #A51632;
 }
 
 * { box-sizing: border-box; }
@@ -255,7 +258,7 @@ h1, h2, h3 { font-family: var(--f-display); font-weight: 600; letter-spacing: -.
   border: 1px solid var(--line);
   border-radius: 10px;
   background:
-    radial-gradient(120% 140% at 85% 0%, rgba(234,166,64,.07), transparent 55%),
+    radial-gradient(120% 140% at 85% 0%, rgba(139,16,40,.10), transparent 55%),
     var(--surface);
   padding: clamp(28px, 4vw, 44px) clamp(22px, 4vw, 44px) clamp(34px, 4vw, 50px);
   overflow: hidden;
@@ -298,7 +301,7 @@ h1, h2, h3 { font-family: var(--f-display); font-weight: 600; letter-spacing: -.
   animation: cross 6s cubic-bezier(.6,.02,.3,1) infinite;
 }
 @keyframes cross {
-  0%, 8%   { left: 6%;  background: var(--data); box-shadow: 0 0 0 5px rgba(82,179,201,.14); }
+  0%, 8%   { left: 6%;  background: var(--data); box-shadow: 0 0 0 5px rgba(165,22,50,.14); }
   92%,100% { left: calc(94% - 11px); background: var(--signal); box-shadow: 0 0 0 5px var(--signal-soft); }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -339,7 +342,7 @@ h1, h2, h3 { font-family: var(--f-display); font-weight: 600; letter-spacing: -.
   padding: 26px 24px;
   transition: border-color .2s, transform .2s, background .2s;
 }
-.card:hover { border-color: #2f4453; transform: translateY(-2px); }
+.card:hover { border-color: var(--signal); transform: translateY(-2px); }
 .card__tag {
   font-family: var(--f-mono);
   font-size: 11.5px;
@@ -389,7 +392,7 @@ h1, h2, h3 { font-family: var(--f-display); font-weight: 600; letter-spacing: -.
   align-items: start;
   transition: border-color .2s;
 }
-.entry:hover { border-color: #2f4453; }
+.entry:hover { border-color: var(--signal); }
 .entry + .entry { margin-top: 16px; }
 .entry__no {
   font-family: var(--f-mono);
