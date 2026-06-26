@@ -8,14 +8,15 @@ export default function Footer() {
         <div className="footer-top">
           <div>
             <p className="kicker">// Threshold Technologies FZE LLC</p>
-            <h2>The digital threshold between construction information and construction intelligence.</h2>
+            <h2>The threshold between business information and digital intelligence.</h2>
           </div>
           <nav className="footer-links" aria-label="Footer">
             <Link href="/#about">About</Link>
             <Link href="/#vision">Vision</Link>
             <Link href="/#services">Services</Link>
             <Link href="/#products">Products</Link>
-            <Link href="/contact">Contact</Link>
+            <Link href="/#partners">Partners</Link>
+            <Link href="/#contact">Contact</Link>
           </nav>
         </div>
         <div className="footer-bottom">

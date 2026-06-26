@@ -7,12 +7,12 @@ const mono = 'var(--font-mono)';
 export function VisionFlow() {
   const nodes = [
     { x: 110, label: 'DATA' },
-    { x: 380, label: 'MODEL' },
-    { x: 650, label: 'COMMERCIAL' },
+    { x: 380, label: 'AI' },
+    { x: 650, label: 'AUTOMATION' },
     { x: 905, label: 'INTELLIGENCE' },
   ];
   return (
-    <svg viewBox="0 0 1000 200" role="img" aria-label="System connection: Data to Model to Commercial to Intelligence" preserveAspectRatio="xMidYMid meet">
+    <svg viewBox="0 0 1000 200" role="img" aria-label="System connection: Data to AI to Automation to Intelligence" preserveAspectRatio="xMidYMid meet">
       {/* baseline the nodes cross */}
       <line x1="40" y1="90" x2="960" y2="90" stroke="var(--hairline)" strokeWidth="1" />
       {/* red data-flow accent */}
@@ -73,6 +73,25 @@ export function ArtAcademy() {
       <circle {...F} cx="140" cy="78" r="5" />
       <circle data-stroke fill="var(--bg)" strokeWidth="1.4" cx="100" cy="78" r="5" />
       <line {...F} x1="100" y1="28" x2="100" y2="73" />
+    </svg>
+  );
+}
+
+export function ArtAI() {
+  return (
+    <svg viewBox="0 0 200 100" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+      {/* central model node branching to commercial signals */}
+      <line {...F} x1="100" y1="50" x2="48" y2="24" />
+      <line {...F} x1="100" y1="50" x2="48" y2="76" />
+      <line {...F} x1="100" y1="50" x2="152" y2="24" />
+      <line {...F} x1="100" y1="50" x2="152" y2="76" />
+      <circle {...F} cx="48" cy="24" r="5" />
+      <circle {...F} cx="48" cy="76" r="5" />
+      <circle {...F} cx="152" cy="24" r="5" />
+      <circle {...F} cx="152" cy="76" r="5" />
+      <circle data-stroke fill="var(--bg)" strokeWidth="1.4" cx="100" cy="50" r="11" />
+      <line data-stroke strokeWidth="1.4" x1="100" y1="44" x2="100" y2="56" />
+      <line data-stroke strokeWidth="1.4" x1="94" y1="50" x2="106" y2="50" />
     </svg>
   );
 }

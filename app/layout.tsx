@@ -27,13 +27,13 @@ const mono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://threshold-technologies.com'),
-  title: 'Threshold Technologies — Digital Infrastructure for Construction',
+  title: 'Threshold Technologies — Digital Solutions for Business',
   description:
-    'Threshold Technologies builds digital systems that connect construction data, BIM models, commercial intelligence, and AI-assisted workflows.',
+    'Threshold Technologies builds digital systems and software across Construction, Transportation, Management, Finance, and Digital Products — integrating AI into business workflows.',
   icons: { icon: '/Threshold_Technologies_Profile-Logo.png' },
   openGraph: {
     title: 'Threshold Technologies',
-    description: 'The digital threshold between construction information and construction intelligence.',
+    description: 'Building digital solutions for business — integrating AI across sectors.',
     type: 'website',
     locale: 'en_AE',
   },
