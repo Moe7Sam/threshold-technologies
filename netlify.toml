@@ -1,3 +1,15 @@
 [build]
   command = "npm run build"
   publish = "out"
+
+[[redirects]]
+  from = "/disam"
+  to = "https://disam-threshold.netlify.app"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/disam/*"
+  to = "https://disam-threshold.netlify.app/:splat"
+  status = 301
+  force = true
