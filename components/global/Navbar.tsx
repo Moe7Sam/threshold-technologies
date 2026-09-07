@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 
-const links = [['/', 'Home'], ['/about', 'About'], ['/services', 'Services'], ['/blog', 'Products'], ['/lab', 'MEL'], ['/contact', 'Contact']] as const;
+const links = [['/', 'Home'], ['/about', 'About'], ['/services', 'Services'], ['/blog', 'Products'], ['/mel', 'MEL'], ['/studio', 'THS Studio'], ['/contact', 'Contact']] as const;
 
 export default function Navbar() {
   const pathname = usePathname();
