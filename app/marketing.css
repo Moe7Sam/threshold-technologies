@@ -7,6 +7,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
 :root {
+  /* Threshold Brand Ecosystem — approved palette */
+  --charcoal:       #0F0F0F;
+  --warm-white:     #F9F7F2;
+  --gold:           #D4AF37;
+
   --ink:        #050505;
   --surface:    #0D0D0F;
   --surface-2:  #15151A;
@@ -106,16 +111,15 @@ h1, h2, h3 { font-family: var(--f-display); font-weight: 600; letter-spacing: -.
   gap: 24px;
 }
 .brand {
-  font-family: var(--f-display);
-  font-weight: 700;
-  font-size: 19px;
-  letter-spacing: -.02em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
   text-decoration: none;
-  color: var(--paper);
-  white-space: nowrap;
+  transition: opacity .18s;
 }
-.brand b { color: var(--signal); font-weight: 700; }
-.brand span { font-weight: 400; color: var(--muted); }
+.brand:hover { opacity: 0.8; }
 
 .nav__links {
   display: flex;
@@ -208,6 +212,17 @@ h1, h2, h3 { font-family: var(--f-display); font-weight: 600; letter-spacing: -.
   margin: 0 0 26px;
 }
 .hero p { font-size: clamp(18px, 2.1vw, 22px); color: var(--muted); max-width: 56ch; margin: 0 0 36px; }
+
+.symbol-hero {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.symbol-hero img {
+  width: 120px;
+  height: auto;
+  max-width: 100%;
+}
 
 .cta-row { display: flex; flex-wrap: wrap; gap: 14px; }
 

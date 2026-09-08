@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
+import Image from 'next/image';
 
 const links = [['/', 'Home'], ['/about', 'About'], ['/services', 'Services'], ['/blog', 'Products'], ['/mel', 'MEL'], ['/studio', 'THS Studio'], ['/contact', 'Contact']] as const;
 
@@ -10,7 +11,16 @@ export default function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   return <header className="nav"><div className="nav__inner">
-    <Link href="/" className="brand" aria-label="Threshold Technologies home"><b>Threshold</b><span>Technologies</span></Link>
+    <Link href="/" className="brand" aria-label="Threshold Technologies home">
+      <Image 
+        src="/brand/threshold/symbol.png" 
+        alt="Threshold Technologies" 
+        width={36} 
+        height={36} 
+        priority
+        style={{ width: 'auto', height: '36px' }}
+      />
+    </Link>
     <button type="button" className="nav__toggle" aria-expanded={open} aria-controls="menu" onClick={() => setOpen(!open)}>Menu</button>
     <nav className={`nav__menu ${open ? 'open' : ''}`} id="menu" aria-label="Primary"><ul className="nav__links">
       {links.map(([href, label]) => <li key={href}><Link href={href} aria-current={pathname === href ? 'page' : undefined} onClick={() => setOpen(false)}>{label}</Link></li>)}

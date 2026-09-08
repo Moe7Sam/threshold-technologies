@@ -9,6 +9,11 @@
    ===================================================================== */
 
 :root {
+  /* §1 Threshold Brand Ecosystem — approved palette */
+  --charcoal:      #0F0F0F; /* primary surface across ecosystem */
+  --warm-white:    #F9F7F2; /* warm accent surface */
+  --gold:          #D4AF37; /* signature accent — restrained use */
+
   /* §4 Canvas */
   --bg:            #050505;
   --surface-1:     #0D0D0F;
