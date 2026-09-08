@@ -1,9 +1,21 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata = { title: 'Threshold Technologies Holdings | Engineering, Technology & Digital Products' };
 
 export default function Home() { return <main>
-  <section className="hero"><div className="wrap"><p className="eyebrow">Threshold Technologies Holdings</p><h1>Engineering intelligence. Digital products. Applied technology.</h1><p>Threshold develops digital systems, engineering intelligence and applied technology through a connected ecosystem of engineering, research and product development.</p><div className="cta-row"><Link className="btn btn--primary" href="/contact">Build With Threshold <span className="arrow">→</span></Link><Link className="btn btn--ghost" href="/services">Explore the Ecosystem</Link></div></div></section>
+  <section className="hero"><div className="wrap">
+    <div className="symbol-hero" style={{ marginBottom: '28px' }}>
+      <Image 
+        src="/brand/threshold/symbol.png" 
+        alt="Threshold Technologies" 
+        width={120} 
+        height={120}
+        priority
+        style={{ width: '120px', height: 'auto' }}
+      />
+    </div>
+    <p className="eyebrow">Threshold Technologies Holdings</p><h1>Engineering intelligence. Digital products. Applied technology.</h1><p>Threshold develops digital systems, engineering intelligence and applied technology through a connected ecosystem of engineering, research and product development.</p><div className="cta-row"><Link className="btn btn--primary" href="/contact">Build With Threshold <span className="arrow">→</span></Link><Link className="btn btn--ghost" href="/services">Explore the Ecosystem</Link></div></div></section>
   <div className="wrap"><div className="sectors"><span>Engineering</span><span>Technology</span><span>Research</span><span>AI</span><span>Digital Products</span></div></div>
   <section className="section"><div className="wrap"><div className="head"><p className="eyebrow">The Threshold Ecosystem</p><h2>One group. Three connected identities.</h2><p className="lede">Threshold Technologies Holdings connects engineering delivery, applied research and digital product development under one operating ecosystem.</p></div><div className="grid grid--3">
     <Link className="card" href="/about"><span className="card__tag">Threshold Technologies</span><h3>Technology & intelligence</h3><p>The group platform for digital systems, AI-assisted workflows, software and strategic technology development.</p></Link>

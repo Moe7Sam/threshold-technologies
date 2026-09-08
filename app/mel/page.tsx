@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata = {
   title: 'MEL — Modern Engineering Lab | Threshold Technologies',
@@ -18,6 +19,16 @@ export default function MELPage() {
   return (
     <main>
       <section className="hero"><div className="wrap">
+        <div className="symbol-hero" style={{ marginBottom: '28px' }}>
+          <Image 
+            src="/brand/mel/symbol.png" 
+            alt="MEL — Modern Engineering Lab" 
+            width={120} 
+            height={120}
+            priority
+            style={{ width: '120px', height: 'auto' }}
+          />
+        </div>
         <p className="eyebrow">Threshold Technologies Holdings · Engineering Arm</p>
         <h1>Modern Engineering Lab</h1>
         <p>ENGINEERING × TECHNOLOGY × RESEARCH</p>

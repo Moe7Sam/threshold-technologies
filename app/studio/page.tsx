@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata = {
   title: 'THS Studio | Threshold Technologies',
@@ -16,9 +17,19 @@ export default function StudioPage() {
   return (
     <main>
       <section className="hero"><div className="wrap">
+        <div className="symbol-hero" style={{ marginBottom: '28px' }}>
+          <Image 
+            src="/brand/ths-studio/symbol.png" 
+            alt="THS Studio — Digital Products Studio" 
+            width={120} 
+            height={120}
+            priority
+            style={{ width: '120px', height: 'auto' }}
+          />
+        </div>
         <p className="eyebrow">Threshold Technologies Holdings · Digital Product Studio</p>
         <h1>THS Studio</h1>
-        <p>Products, experiences and commercialisation.</p>
+        <p>Digital products, presentation, commercialization and customer experience.</p>
         <p>THS Studio turns validated ideas, engineering intelligence and software concepts into clear digital products, market-facing experiences and customer-ready platforms.</p>
         <div className="cta-row"><Link className="btn btn--primary" href="/contact">Work With THS Studio <span className="arrow">→</span></Link><Link className="btn btn--ghost" href="/mel">Explore MEL</Link></div>
       </div></section>
