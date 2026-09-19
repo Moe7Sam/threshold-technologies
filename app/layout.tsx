@@ -1,5 +1,4 @@
 import './globals.css'
-import './marketing.css'
 import type { Metadata } from 'next'
 import { Space_Grotesk, Inter, JetBrains_Mono } from 'next/font/google'
 import Navbar from '@/components/global/Navbar'
@@ -28,13 +27,13 @@ const mono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://threshold-technologies.com'),
-  title: 'Threshold Technologies — Digital Solutions for Business',
+  title: 'Threshold Technologies — Engineering, Technology & Digital Products',
   description:
-    'Threshold Technologies builds digital systems and software across Construction, Transportation, Management, Finance, and Digital Products — integrating AI into business workflows.',
+    'Threshold Technologies is a UAE-based engineering, technology and product development ecosystem. MEL delivers engineering and research. THS Studio commercialises digital products.',
   icons: { icon: '/Threshold_Technologies_Profile-Logo.png' },
   openGraph: {
     title: 'Threshold Technologies',
-    description: 'Building digital solutions for business — integrating AI across sectors.',
+    description: 'Engineering, technology and digital products under one ecosystem.',
     type: 'website',
     locale: 'en_AE',
   },

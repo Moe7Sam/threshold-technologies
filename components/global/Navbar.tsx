@@ -4,16 +4,65 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 
-const links = [['/', 'Home'], ['/about', 'About'], ['/services', 'Services'], ['/blog', 'Products'], ['/mel', 'MEL'], ['/studio', 'THS Studio'], ['/contact', 'Contact']] as const;
+const links = [
+  ['/', 'Home'],
+  ['/about', 'About'],
+  ['/mel', 'MEL'],
+  ['/studio', 'THS Studio'],
+  ['/products', 'Products'],
+  ['/services', 'Services'],
+  ['/contact', 'Contact'],
+] as const;
 
 export default function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
-  return <header className="nav"><div className="nav__inner">
-    <Link href="/" className="brand" aria-label="Threshold Technologies home"><b>Threshold</b><span>Technologies</span></Link>
-    <button type="button" className="nav__toggle" aria-expanded={open} aria-controls="menu" onClick={() => setOpen(!open)}>Menu</button>
-    <nav className={`nav__menu ${open ? 'open' : ''}`} id="menu" aria-label="Primary"><ul className="nav__links">
-      {links.map(([href, label]) => <li key={href}><Link href={href} aria-current={pathname === href ? 'page' : undefined} onClick={() => setOpen(false)}>{label}</Link></li>)}
-    </ul><Link className="nav__cta" href="/contact" onClick={() => setOpen(false)}>Build With Threshold</Link></nav>
-  </div></header>;
+
+  return (
+    <header className="site-header">
+      <nav>
+        <Link href="/" className="wordmark" aria-label="Threshold Technologies home">
+          <span className="brand-mark" aria-hidden="true"><i></i><i></i></span>
+          <span className="wordmark-copy">
+            <b>Threshold</b>
+            <small>Technologies</small>
+          </span>
+        </Link>
+        <div className="desktop-nav">
+          {links.map(([href, label]) => (
+            <Link
+              key={href}
+              href={href}
+              className={pathname === href ? 'is-active' : ''}
+            >
+              {label}
+            </Link>
+          ))}
+        </div>
+        <Link href="/contact" className="nav-cta">Engage</Link>
+        <button
+          type="button"
+          className="nav-toggle"
+          aria-expanded={open}
+          aria-controls="mobile-menu"
+          onClick={() => setOpen(!open)}
+        >
+          Menu
+        </button>
+      </nav>
+      <div className={`mobile-nav ${open ? 'open' : ''}`} id="mobile-menu">
+        {links.map(([href, label]) => (
+          <Link
+            key={href}
+            href={href}
+            className={pathname === href ? 'is-active' : ''}
+            onClick={() => setOpen(false)}
+          >
+            {label}
+          </Link>
+        ))}
+        <Link href="/contact" className="nav-cta" onClick={() => setOpen(false)}>Engage</Link>
+      </div>
+    </header>
+  );
 }

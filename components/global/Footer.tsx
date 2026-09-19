@@ -1,5 +1,35 @@
 import Link from 'next/link';
 
+const footerLinks = [
+  ['/', 'Home'],
+  ['/about', 'About'],
+  ['/mel', 'MEL'],
+  ['/studio', 'THS Studio'],
+  ['/products', 'Products'],
+  ['/services', 'Services'],
+  ['/contact', 'Contact'],
+] as const;
+
 export default function Footer() {
-  return <footer className="foot"><div className="wrap"><div className="foot__top"><p className="foot__statement">Engineering intelligence, applied research and digital products under one Threshold ecosystem.</p><nav aria-label="Footer"><ul className="foot__nav"><li><Link href="/">Home</Link></li><li><Link href="/about">About</Link></li><li><Link href="/services">Services</Link></li><li><Link href="/blog">Products</Link></li><li><Link href="/mel">MEL</Link></li><li><Link href="/studio">THS Studio</Link></li><li><Link href="/contact">Contact</Link></li></ul></nav></div><div className="foot__meta"><span>Threshold Technologies FZE LLC — Ajman NuVentures Centre Free Zone, UAE</span><span>© {new Date().getFullYear()} Threshold Technologies FZE LLC</span></div></div></footer>;
+  return (
+    <footer className="site-footer">
+      <div className="footer-inner">
+        <div className="footer-top">
+          <div>
+            <p className="kicker">Threshold Technologies FZE LLC</p>
+            <h2>Engineering, technology and digital products under one ecosystem.</h2>
+          </div>
+          <nav aria-label="Footer" className="footer-links">
+            {footerLinks.map(([href, label]) => (
+              <Link key={href} href={href}>{label}</Link>
+            ))}
+          </nav>
+        </div>
+        <div className="footer-bottom">
+          <span>Ajman NuVentures Centre Free Zone — United Arab Emirates</span>
+          <span>© {new Date().getFullYear()} Threshold Technologies FZE LLC</span>
+        </div>
+      </div>
+    </footer>
+  );
 }
